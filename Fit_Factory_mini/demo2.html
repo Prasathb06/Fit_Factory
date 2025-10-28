@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/front-page.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <title>Document</title>
+</head>
+<style>
+    .container .col .card
+    {
+      background-color: gray;
+      color: white;
+    }
+    .container .col .card:hover
+    {
+      transform: scale(1.1);
+    }
+  .wrapper
+  {
+    border: 1x soli white;
+    border: none;
+    position: absolute;
+    width: 80vw;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    
+  }
+  .counter
+  {
+    background-image: url(./gym-backgrund-img/12345.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .container1
+  {
+    width: 28vmin;
+    height: 25vmin;
+    border: 1px solid black;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0em 0;
+    position: relative;
+    font-size:16px;
+    /* border-radius: 0.5em; */
+    /* border-bottom: -4px; */
+    border-bottom: 5px solid red;
+    margin-left: 50px; 
+   }
+  span.purecounter
+  {
+    color: white;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
+  }
+  span.purecounter1
+  {
+    color: white;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
+  }
+  span.purecounter2
+  {
+    color: white;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
+  }
+  span.purecounter3
+  {
+    color: white;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
+  }
+  span.text
+  {
+    color: white;
+    /* font-size: 1em; */
+    text-align: center;
+    pad: 0.7em 0;
+    /* font-weight: 400; */
+    /* line-height: 0; */
+    font-weight: 800;
+  }
+
+</style>
+<body style="background-color: gray;">
+  <!-- <div class="container">
+    <h1>Equipments</h1>
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
+      <div class="col">
+        <div class="p-2 bd-highlight">
+        <div class="card" style="height: 400px;">
+          <img src="./workout-img/8IN1-COMBOO-1.jpg" style="height: 220px;" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dumbblles Comboo</h5>
+            <h5 class="card-text">$900//</h5>
+          </div>
+          <div class="card-body text-center">
+            <button type="button" class="btn btn-dark"onclick="validation();"><a href="#" class="card-link text-decoration-none text-light"><b>Buy Now</b></a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="col">
+        <div class="p-2 bd-highlight">
+          <div class="card" style="height: 400px;">
+            <img src="./workout-img/band.jpg" style="height: 375px;" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Band</h5>
+              <h5 class="card-text">$800//</h5>
+            </div>
+            <div class="card-body text-center">
+              <button type="button" class="btn btn-dark"onclick="validation();"><a href="#" class="card-link text-decoration-none text-light"><b>Buy Now</b></a></button>
+            </div>
+          </div>
+      </div>
+    </div>
+      <div class="col">
+        <div class="p-2 bd-highlight">
+        <div class="card" style="height: 400px;">
+          <img src="./workout-img/dumbbelles.webp" style="height: 375px;" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dumbblles</h5>
+            <h5 class="card-text">$500//</h5>
+          </div>
+          <div class="card-body text-center">
+            <button type="button" class="btn btn-dark"onclick="validation();"><a href="#" class="card-link text-decoration-none text-light"><b>Buy Now</b></a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="p-2 bd-highlight">
+        <div class="card" style="height: 400px;">
+          <img src="./workout-img/fitband.webp" style="height:220px ;" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">fitband</h5>
+            <h5 class="card-text">$450//</h5>
+          </div>
+          <div class="card-body text-center">
+            <button type="button" class="btn btn-dark"onclick="validation();"><a href="#" class="card-link text-decoration-none text-light"><b>Buy Now</b></a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="p-2 bd-highlight">
+        <div class="card" style="height: 400px;">
+          <img src="./workout-img/gym-ball.jpg" style="height: 220px;" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Gym-Ball</h5>
+            <h5 class="card-text">$200//</h5>
+          </div>
+          <div class="card-body text-center">
+            <button type="button" class="btn btn-dark"onclick="validation();"><a href="#" class="card-link text-decoration-none text-light"><b>Buy Now</b></a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="p-2 bd-highlight">
+        <div class="card" style="height: 400px;">
+          <img src="./workout-img/gym-insane-gloves-hand-gripper-skipping-rope.jpg" style="height: 220px;" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Glove-gripper-skipping</h5>
+            <h5 class="card-text">$600//</h5>
+          </div>
+          <div class="card-body text-center">
+            <button type="button" class="btn btn-dark"onclick="validation();"><a href="#" class="card-link text-decoration-none text-light"><b>Buy Now</b></a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="p-2 bd-highlight">
+        <div class="card" style="height: 400px;">
+          <img src="./workout-img/mat.webp" style="height: 375px;" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mat</h5>
+            <h5 class="card-text">$350//</h5>
+          </div>
+          <div class="card-body text-center">
+            <button type="button" class="btn btn-dark"onclick="validation();"><a href="#" class="card-link text-decoration-none text-light"><b>Buy Now</b></a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="p-2 bd-highlight">
+        <div class="card" style="height: 400px;">
+          <img src="./workout-img/protien-shaker.jpg" style="height: 375px;" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">Protien-Shaker</h5>
+            <h5 class="card-text">$700//</h5>
+          </div>
+          <div class="card-body text-center fs-5">
+            <button type="button" class="btn btn-dark" onclick="validation();"><a href="#" class="card-link text-decoration-none text-light"><b>Buy Now</b></a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div> -->
+  <!-- <script>
+    function validation(){
+        swal("Good job!", "You have successfully placed your order!", "success");
+    }
+  </script> -->
+  <!-- <div class="wrapper">
+    <div class="container1">
+      <span class="num" data-val="1m">0</span>
+      <span class="text">Number of Customer</span>
+    </div>
+    <div class="container1">
+      <span class="num" data-val="30">0</span>
+      <span class="text">Our Clients</span>
+    </div>
+    <div class="container1">
+      <span class="num" data-val="8000">0</span>
+      <span class="text">Number of Products</span>
+    </div>
+    <div class="container1">
+      <span class="num" data-val="10,000">0</span>
+      <span class="text">Weekly Visitors</span>
+    </div>
+  </div> -->
+  <br><br>
+  <br>
+  <br>
+  <div class="container wrapper counter">
+    <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4">
+      <div class="col">
+        <div class="container1">
+          <span class="purecounter">0</span>
+          <span class="text">Number of Customer</span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="container1">
+          <span class="purecounter1">0</span>
+          <span class="text">Our Clients</span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="container1">
+          <span class="purecounter2">0</span>
+          <span class="text">Number of Products</span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="container1">
+          <span class="purecounter3">0</span>
+          <span class="text">Weekly Visitors</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+<script>new PureCounter({
+  selector: ".purecounter", 
+  start: 0, 
+  end: 10000, 
+  duration: 3, 
+  delay: 10, 
+  once: true, 
+  pulse: false, 
+  decimals: 0, 
+  legacy: true, 
+  filesizing: false, 
+  currency: false, 
+  formater: "us-US", 
+  separator: false
+});
+new PureCounter({
+  selector: ".purecounter1", 
+  start: 0, 
+  end: 45, 
+  duration: 3, 
+  delay: 10, 
+  once: true, 
+  pulse: false, 
+  decimals: 0, 
+  legacy: true, 
+  filesizing: false, 
+  currency: false, 
+  formater: "us-US", 
+  separator: false
+});
+new PureCounter({
+  selector: ".purecounter2", 
+  start: 0, 
+  end: 8000, 
+  duration: 3, 
+  delay: 10, 
+  once: true, 
+  pulse: false, 
+  decimals: 0, 
+  legacy: true, 
+  filesizing: false, 
+  currency: false, 
+  formater: "us-US", 
+  separator: false
+});
+new PureCounter({
+  selector: ".purecounter3", 
+  start: 0, 
+  end: 8000, 
+  duration: 3, 
+  delay: 10, 
+  once: true, 
+  pulse: false, 
+  decimals: 0, 
+  legacy: true, 
+  filesizing: false, 
+  currency: false, 
+  formater: "us-US", 
+  separator: false
+});
+</script>
+
+
+      <script src="js/addtocart.js"></script>
+      <script src="arrowbutton.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
